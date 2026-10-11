@@ -38,7 +38,7 @@
   function titleDate(){return new Intl.DateTimeFormat('es-ES',{weekday:'long',day:'numeric',month:'long'}).format(new Date());}
   function navRender(active){const defaults=nav.slice(0,4).map(x=>x[0]),custom=JSON.parse(localStorage.getItem('vida-nav')||'null'),ids=(custom?.length===4?custom:defaults).concat('mas');$('#bottom-nav').innerHTML=ids.map(id=>{const fixed=nav.find(x=>x[0]===id),m=modules[id],icon=fixed?.[1]||m?.emoji||'•',label=fixed?.[2]||m?.title||id;return `<a class="nav-item ${active===id?'active':''}" href="#${id}"><span>${icon}</span><small>${esc(label)}</small></a>`;}).join('');}
   function applyTheme(theme){const actual=theme==='sistema'?(matchMedia('(prefers-color-scheme: dark)').matches?'oscuro':'claro'):theme;document.documentElement.dataset.theme=actual;}
-  function pageHead(title,sub='',action=''){return `<div class="page-head"><div><p class="eyebrow">TU ESPACIO PERSONAL</p><h1>${title}</h1>${sub?`<p class="subhead">${sub}</p>`:''}</div>${action}</div>`;}
+  function pageHead(title,sub='',action=''){return `<div class="page-head"><div><p class="eyebrow">TU ESPACIO PERSONAL</p><h1>${title}</h1>${sub?`<p class="subhead">${sub}</p>`:''}</div>${action}</div>`;} window.pageHead=pageHead;
   function empty(title,desc,btn){return `<div class="empty-state"><div class="empty-icon">✳</div><h3>${title}</h3><p>${desc}</p>${btn||''}</div>`;}
   function button(label,action,kind='primary'){return `<button class="button ${kind}" data-action="${action}">${label}</button>`;}
   const addButton=(type,label)=>`<button class="button primary" data-action="add" data-type="${type}">＋ ${label||'Añadir'}</button>`;
