@@ -34,7 +34,7 @@ La taxonomía de áreas y subdivisiones no se precarga porque la especificación
 - Tareas con estado, prioridad, fecha/hora, repetición, recordatorios, objetivos y selección visual de varias áreas y subdivisiones. Las ocurrencias completadas se registran por fecha; las futuras se conservan.
 - Plan semanal calculado con la fecha actual y filtros por estado, fecha, prioridad y área.
 - Calendario de agenda, día, semana y mes, con navegación de fechas, tareas, eventos y ocurrencias recurrentes.
-- Finanzas con movimientos, balance, ingresos, gastos, ahorro neto, tendencia de seis meses, presupuestos mensuales/anuales y objetivos de ahorro.
+- Presupuesto al estilo de FINANZAS: cuentas múltiples con saldo inicial, ingresos y gastos asignados a su cuenta, total calculado automáticamente y deudas por persona con cobros parciales que se registran como ingresos en la cuenta elegida. Mantiene además movimientos, presupuestos mensuales/anuales, tendencia de gastos y objetivos de ahorro.
 - Compras con cantidad, precio, estado, totales y marcación como comprado; wishlist separada.
 - Alimentación por día y tipo de comida. Introduce alimentos, uno por línea como `avena | 40 | g | con yogur`; cada línea queda guardada con nombre, cantidad, unidad y nota.
 - Biblioteca de ejercicios, rutinas con ejercicios vinculados y sesiones que pueden asociarse a una rutina o registrarse libremente.
