@@ -1,0 +1,6 @@
+# Keep ChatGPT project references out of the public app repository.
+/AGENTS.md
+/sources/
+/vida-copia-*.json
+/node_modules/
+

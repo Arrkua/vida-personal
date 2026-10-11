@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Tu espacio personal de organización, privado y disponible sin conexión.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>VIDA · Tu espacio personal</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="#inicio" aria-label="VIDA, inicio"><span class="brand-mark">v</span><span>vida</span></a><button class="icon-button" id="search-open" aria-label="Buscar">⌕</button></header>
+    <main id="app" tabindex="-1"></main>
+    <nav class="bottom-nav" id="bottom-nav" aria-label="Navegación principal"></nav>
+  </div>
+  <dialog id="modal" class="modal"><form method="dialog" class="modal-card" id="modal-content"><button class="modal-close" value="cancel" aria-label="Cerrar">×</button><div id="modal-body"></div></form></dialog>
+  <div id="toast" role="status" class="toast" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
