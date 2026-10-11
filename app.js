@@ -55,6 +55,6 @@
   document.addEventListener('change',async e=>{if(e.target.id==='import-file'&&e.target.files[0]){try{const backup=JSON.parse(await e.target.files[0].text());if(backup.app!=='VIDA'||!Array.isArray(backup.records))throw new Error('Formato incorrecto');if(!confirm(`Se importarán ${backup.records.length} registros. Los identificadores coincidentes se actualizarán. ¿Continuar?`))return;for(const r of backup.records)if(r.id&&modules[r.type])await save(r);toast('Copia importada');render();}catch(err){toast('No se pudo importar: revisa el archivo.');}}if(e.target.id==='meal-date')location.hash=`comidas?date=${e.target.value}`;if(e.target.id==='calendar-date')location.hash=`calendario?date=${e.target.value}`;});
   $('#search-open').addEventListener('click',()=>location.hash='buscar');window.addEventListener('hashchange',()=>render().catch(showFatal));
   function showFatal(e){console.error(e);$('#app').innerHTML=`${pageHead('No se pudo abrir VIDA')}<div class="settings-card"><p>El almacenamiento local no está disponible en este navegador. Prueba con Safari o Chrome actualizado.</p></div>`;}
-  openDB().then(()=>{if('serviceWorker'in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./sw.js').catch(console.warn);render();}).catch(showFatal);
+  openDB().then(database=>{db=database;if('serviceWorker'in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./sw.js').catch(console.warn);render();}).catch(showFatal);
 })();
 
