@@ -28,7 +28,7 @@ jobs:
       - name: Prepare app files
         run: |
           mkdir _site
-          cp index.html app.js styles.css manifest.json sw.js icon.svg icon-192.png icon-512.png _site/
+          cp index.html app.js styles.css advanced.css manifest.json sw.js icon.svg icon-192.png icon-512.png _site/
       - name: Upload app
         uses: actions/upload-pages-artifact@v3
         with:
@@ -36,4 +36,3 @@ jobs:
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v4
-
